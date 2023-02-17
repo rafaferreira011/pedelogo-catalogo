@@ -11,7 +11,6 @@ pipeline {
             steps {
                 script { 
                     dockerapp = docker.build("rafaferreira011/api-produto:${env.BUILD_ID}",'-f ./src/PedeLogo.Catalogo.Api/Dockerfile .')
-                    args '-v $HOME:/home/jenkins'
                 }
             }
         }
